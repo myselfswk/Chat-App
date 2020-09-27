@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Chat App Using JS</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel='stylesheet' type='text/css' media='screen' href='./Style.css'>
+        <!-- Sweet Alert -->
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-analytics.js"></script>
+
+
+        <script>
+            // Your web app's Firebase configuration
+            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+            var firebaseConfig = {
+              apiKey: "AIzaSyA9xU7lzFDRppc-hTmUFY4LJK4SJ6pJ3B8",
+              authDomain: "chatapp-js-6b623.firebaseapp.com",
+              databaseURL: "https://chatapp-js-6b623.firebaseio.com",
+              projectId: "chatapp-js-6b623",
+              storageBucket: "chatapp-js-6b623.appspot.com",
+              messagingSenderId: "942186906791",
+              appId: "1:942186906791:web:0cfe72b5e4f39147448782",
+              measurementId: "G-9M2CYPD2H1"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            firebase.analytics();
+          </script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <div class="chatBox">
+                        <h1 class="text-uppercase p-2"><i class="fa fa-envelope"></i>Chat App Using JS</h1>
+                        <hr />
+                        <ul id="messages"></ul>
+                        <div class="d-flex inputSide">
+                            <input type="text" name="messgae" id="message" placeholder="Enter Your Messgae" class="form-control" />
+                            <button class="btn btn-warning rounded-circle" onclick="sendMessage();">
+                                <i class="fa fa-location-arrow p-1 "></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="./app.js"></script>
+    </body>
+</html>
